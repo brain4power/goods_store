@@ -10,8 +10,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.19",
+    "material-icons": "^0.3.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuesax": "^3.8.61"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

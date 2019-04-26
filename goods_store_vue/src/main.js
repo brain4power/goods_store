@@ -3,6 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import BootstrapVue from 'bootstrap-vue'
+import Vuesax from 'vuesax'
+
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'vuesax/dist/vuesax.css' //Vuesax styles
+import 'material-icons/iconfont/material-icons.css';
+
+
+Vue.use(BootstrapVue)
+Vue.use(Vuesax)
 
 Vue.config.productionTip = false
 
