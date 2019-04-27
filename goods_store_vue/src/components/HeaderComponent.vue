@@ -3,8 +3,8 @@
         <div class="container">
             <div class="col-12 p-0 d-flex align-items-stretch justify-content-between header_row">
                 <div class="p-0 row justify-content-start">
-                    <div id="parentx" class="p-0 pr-3 d-flex align-items-stretch">
-                        <button @click="active=!active" class="d-flex align-items-center pr-2">
+                    <div id="parentx" class="p-0 pr-3 pl-3 d-flex align-items-stretch">
+                        <button @click="active=!active" class="d-flex align-items-center">
                             <span class="d-none d-sm-block header_menu_catalog_name primary">Каталог товаров</span>
                             <vs-icon icon="menu" color="primary"></vs-icon>
                         </button>
@@ -65,11 +65,11 @@
 
                         </vs-sidebar>
                     </div>
-                    <button class="col-sm-1 p-0 d-flex align-items-stretch">
+                    <button class="p-0 d-flex align-items-stretch">
                         <vs-icon icon="favorite_border" color="primary"></vs-icon>
                     </button>
                 </div>
-                <div class="p-0 row justify-content-end">
+                <div class="p-0 row pr-3 justify-content-end">
                     <button class="d-flex align-items-stretch justify-content-end">
                         <vs-icon icon="search" color="primary"></vs-icon>
                     </button>
@@ -88,7 +88,7 @@
 
 <script>
     export default {
-        name: "Header",
+        name: "HeaderComponent",
         data: () => ({
             active: false,
             cart_counter: 10,
