@@ -10,7 +10,6 @@
                         </button>
                         <vs-sidebar parent="body" default-index="1" color="primary" class="sidebarx" spacer
                                     v-model="active">
-
                             <div class="header-sidebar" slot="header">
                                 <vs-avatar size="70px" src="https://randomuser.me/api/portraits/men/85.jpg"/>
 
