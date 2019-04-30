@@ -3,7 +3,9 @@
       <header-component></header-component>
       <div class="container">
           <div class="d-flex flex-wrap  products">
-              <product-card-component class=""></product-card-component>
+              <product-card-component ></product-card-component>
+              <product-card-component></product-card-component>
+              <product-card-component></product-card-component>
               <product-card-component></product-card-component>
               <product-card-component></product-card-component>
               <product-card-component></product-card-component>
@@ -31,17 +33,22 @@ export default {
     }
     @media (min-width: 992px) {
         .products {
-            width: 870px;
+            width: 920px;
         }
     }
     @media (max-width: 991px) {
         .products {
-            width: 580px;
+            width: 690px;
         }
     }
     @media (max-width: 767px) {
         .products {
-            width: 290px;
+            width: 460px;
+        }
+    }
+    @media (max-width: 509px) {
+        .products {
+            width: 230px;
         }
     }
 </style>
