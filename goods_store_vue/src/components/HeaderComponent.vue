@@ -75,9 +75,10 @@
                     <div class="d-flex align-items-center p-0 pl-3 cart_ico">
                         <button class="d-flex align-items-stretch justify-content-end cart_ico">
                             <vs-icon icon="shopping_cart" color="primary"></vs-icon>
+                            <span class="cart_counter danger">{{cart_counter}}</span>
+                            <span class="d-none d-sm-block primary pl-2">{{total_cost}}p</span>
                         </button>
-                        <span class="cart_counter danger">{{cart_counter}}</span>
-                        <span class="d-none d-sm-block primary pl-2">{{total_cost}}p</span>
+
                     </div>
                 </div>
             </div>
@@ -168,8 +169,8 @@
         min-width: 19px;
         max-width: 50px;
         height: 19px;
-        margin-top: 8px;
-        margin-left: 24px;
+        margin-top: -4px;
+        margin-left: 7px;
         padding: 0 3px;
         line-height: 19px;
         vertical-align: middle;
@@ -178,8 +179,6 @@
         font-size: 11px;
         color: #fff;
         border-radius: 20px;
-        transform: scale(1);
-        transition: transform .15s ease;
         top: -4px;
         left: 5px;
         font-weight: 700;
