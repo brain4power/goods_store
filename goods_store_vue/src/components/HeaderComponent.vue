@@ -78,7 +78,6 @@
                             <span class="cart_counter danger">{{cart_counter}}</span>
                             <span class="d-none d-sm-block primary pl-2">{{total_cost}}p</span>
                         </button>
-
                     </div>
                 </div>
             </div>
