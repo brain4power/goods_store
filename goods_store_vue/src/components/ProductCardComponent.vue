@@ -1,11 +1,11 @@
 <template>
     <div class="product row">
         <div class="product__picture col-lg-12 col-md-6 col-6">
-            <div class="temp_img">
+            <a href="#" class="temp_img">
                 <!--<img :src="img">-->
-            </div>
+            </a>
         </div>
-        <div class="product__title d-lg-none col-md-6 col-6">{{product_desc}}</div>
+        <a href="#" class="product__title d-lg-none col-md-6 col-6">{{product_desc}}</a>
         <div class="product__cost col-6 d-flex">
             <span class="align-self-center">120.90p</span>
         </div>
@@ -14,7 +14,7 @@
                 <vs-icon icon="favorite_border" color="primary"></vs-icon>
             </button>
         </div>
-        <div class="product__title col-lg-12 d-lg-block d-md-none d-none">{{product_desc}}</div>
+        <a href="#" class="product__title col-lg-12 d-lg-block d-md-none d-none">{{product_desc}}</a>
         <div class="product__add-to-cart col-12">
             <button class="col-12 d-flex justify-content-around">
                 <span class="">В корзину</span>
@@ -35,6 +35,7 @@
 </script>
 <style scoped>
     .temp_img {
+        display: block;
         background-color: lightgray;
         height: 100px;
     }
@@ -57,6 +58,8 @@
         font-size: 12px;
         margin-bottom: 10px;
         line-height: 16px;
+        color: inherit;
+        text-decoration: none;
     }
 
     .product__cost {
