@@ -1,13 +1,13 @@
 <template>
     <div class="product row">
         <div class="product__picture col-lg-12 col-md-6 col-6">
-            <a href="#" class="temp_img">
-                <!--<img :src="img">-->
+            <a href="#" class="product_image_catalog_link d-flex align-items-center">
+                <img class="product_image_catalog" :src="product.image">
             </a>
         </div>
         <a href="#" class="product__title d-lg-none col-md-6 col-6">{{product_desc}}</a>
         <div class="product__cost col-6 d-flex">
-            <span class="align-self-center">120.90p</span>
+            <span class="align-self-center">{{product.price}}р</span>
         </div>
         <div class="product__like col-6 d-flex justify-content-end">
             <button class="d-flex">
@@ -27,6 +27,7 @@
 <script>
     export default {
         name: "ProductCardComponent",
+        props: ["product"],
         data: () => ({
             product_desc: 'Бумажка от конфеты уп. 10 шт. Можно взять много',
         })
@@ -34,14 +35,18 @@
 
 </script>
 <style scoped>
-    .temp_img {
+    .product_image_catalog_link {
         display: block;
-        background-color: lightgray;
+        /*background-color: lightgray;*/
         height: 100px;
+    }
+    .product_image_catalog {
+        width: 100%;
+        height: auto;
     }
 
     @media (min-width: 992px) {
-        .temp_img {
+        .product_image_catalog_link {
             height: 200px;
         }
     }
