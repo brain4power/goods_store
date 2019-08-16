@@ -7,9 +7,9 @@ import BootstrapVue from 'bootstrap-vue'
 import Vuesax from 'vuesax'
 
 
+import 'vuesax/dist/vuesax.css' //Vuesax styles
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import 'vuesax/dist/vuesax.css' //Vuesax styles
 import 'material-icons/iconfont/material-icons.css';
 
 
