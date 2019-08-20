@@ -73,11 +73,13 @@
                         <vs-icon icon="search" color="primary"></vs-icon>
                     </button>
                     <div class="d-flex align-items-center p-0 pl-3 cart_ico">
-                        <a href="/cart" class="d-flex align-items-stretch justify-content-end cart_ico">
-                            <vs-icon icon="shopping_cart" color="primary"></vs-icon>
-                            <span class="cart_counter danger">{{total_count}}</span>
-                            <span class="d-none d-sm-block primary pl-2">{{total_price}}p</span>
-                        </a>
+                        <router-link to="cart">
+                            <div class="d-flex align-items-stretch justify-content-end cart_ico">
+                                <vs-icon icon="shopping_cart" color="primary"></vs-icon>
+                                <span class="cart_counter danger">{{total_count}}</span>
+                                <span class="d-none d-sm-block primary pl-2">{{total_price}}p</span>
+                            </div>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -104,6 +106,9 @@
 </script>
 
 <style scoped>
+    a {
+        text-decoration: none;
+    }
     .header_div {
         box-shadow: 0 0 5px rgba(122, 122, 122, 0.5);
     }

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <header-component></header-component>
         <div class="container">
             <div class="d-flex flex-wrap products">
                 <product-card-component

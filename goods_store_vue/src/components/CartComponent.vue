@@ -1,6 +1,5 @@
 <template>
     <div class="cart">
-        <HeaderComponent></HeaderComponent>
         <div class="container">
             <div class="row cart_header">
                 <div class="d-flex justify-content-between align-items-center col-lg-8 col-md-8">
