@@ -96,6 +96,7 @@
         border-radius: 5px;
         outline: none;
         padding: 3px;
+        background-color: white;
     }
     .product__add-to-cart button:active {
         background-color: rgb(31, 116, 255);
