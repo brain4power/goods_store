@@ -75,8 +75,8 @@
                     <div class="d-flex align-items-center p-0 pl-3 cart_ico">
                         <button class="d-flex align-items-stretch justify-content-end cart_ico">
                             <vs-icon icon="shopping_cart" color="primary"></vs-icon>
-                            <span class="cart_counter danger">{{cart_counter}}</span>
-                            <span class="d-none d-sm-block primary pl-2">{{total_cost}}p</span>
+                            <span class="cart_counter danger">{{total_count}}</span>
+                            <span class="d-none d-sm-block primary pl-2">{{total_price}}p</span>
                         </button>
                     </div>
                 </div>
@@ -86,13 +86,20 @@
 </template>
 
 <script>
+    import { mapGetters } from 'vuex'
     export default {
         name: "HeaderComponent",
         data: () => ({
             active: false,
             cart_counter: 10,
             total_cost: 100000,
-        })
+        }),
+        computed: {
+            ...mapGetters('cart', {
+                total_price: 'cartTotalPrice',
+                total_count: 'cartTotalCount',
+            })
+        }
     }
 </script>
 

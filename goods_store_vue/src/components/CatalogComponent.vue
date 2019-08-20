@@ -19,6 +19,8 @@
 
 <script>
     import {APIService} from '../http/APIService';
+    import { mapGetters, mapActions } from 'vuex'
+
     const API_URL = 'http://localhost:8000';
     const apiService = new APIService();
 
@@ -59,6 +61,7 @@
                         }
                     }
                     this.loading = false;
+                    console.log(this.products)
                 });
             },
             getPage(link) {
@@ -94,7 +97,9 @@
             selectProduct(product){
                 this.selectedProduct = product;
             },
+
         },
+
         mounted() {
             this.getProducts();
         },

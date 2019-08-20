@@ -11,6 +11,7 @@ import 'vuesax/dist/vuesax.css' //Vuesax styles
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'material-icons/iconfont/material-icons.css';
+import store from './store';
 
 
 Vue.use(BootstrapVue)
@@ -22,6 +23,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+    store,
   components: { App },
   template: '<App/>'
 })

@@ -5,24 +5,22 @@
             <div class="row cart_header">
                 <div class="d-flex justify-content-between align-items-center col-lg-8 col-md-8">
                     <span class="row cart_name">Корзина</span>
-                    <vs-button color="primary" type="line" icon="delete_forever" size="small" class="row cart__del_all">Удалить все</vs-button>
+                    <vs-button @click="clearCart" color="primary" type="line" icon="delete_forever" size="small" class="row cart__del_all">Удалить все</vs-button>
                 </div>
             </div>
             <div class="row cart__products__container d-flex justify-content-between">
                 <div class="cart__products col-lg-8 col-md-8">
-                    <ProductCardCartComponent></ProductCardCartComponent>
-                    <ProductCardCartComponent></ProductCardCartComponent>
-                    <ProductCardCartComponent></ProductCardCartComponent>
-                    <ProductCardCartComponent></ProductCardCartComponent>
-                    <ProductCardCartComponent></ProductCardCartComponent>
-                    <ProductCardCartComponent></ProductCardCartComponent>
-                    <ProductCardCartComponent></ProductCardCartComponent>
-                    <ProductCardCartComponent></ProductCardCartComponent>
+                    <ProductCardCartComponent
+                        v-for="item in cartProducts"
+                        :key="item.product.pk"
+                        :item="item">
+                    </ProductCardCartComponent>
+
                 </div>
                 <div class="cart__summary col-lg-3 col-md-3">
                     <div class="d-flex justify-content-between">
                         <span class="">Итого:</span>
-                        <span class="font-weight-bold">2340р</span>
+                        <span class="font-weight-bold">{{total_price}}р</span>
                     </div>
                     <div>
                         <vs-button color="primary" type="filled" class="button_checkout">Заказать</vs-button>
@@ -36,12 +34,26 @@
 <script>
     import HeaderComponent from "./HeaderComponent";
     import ProductCardCartComponent from "./ProductCardCartComponent";
+    import { mapGetters, mapActions } from 'vuex'
+
     export default {
         name: "CartComponent",
         components: {ProductCardCartComponent, HeaderComponent},
         comments: {
             HeaderComponent: () => import('./HeaderComponent.vue'),
             ProductCardCartComponent: () => import('./ProductCardCartComponent.vue'),
+        },
+        computed: {
+            ...mapGetters('cart', {
+                total_price: 'cartTotalPrice',
+                total_count: 'cartTotalCount',
+                cartProducts: 'cartProducts'
+            })
+        },
+        methods: {
+            ...mapActions('cart', {
+                clearCart: 'clearCart'
+            })
         }
     }
 </script>

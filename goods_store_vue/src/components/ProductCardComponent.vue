@@ -16,7 +16,8 @@
         </div>
         <a href="#" class="product__title col-lg-12 d-lg-block d-md-none d-none">{{product_desc}}</a>
         <div class="product__add-to-cart col-12">
-            <button class="col-12 d-flex justify-content-around">
+            <button class="col-12 d-flex justify-content-around"
+            @click="addProductToCart(product)">
                 <span class="">В корзину</span>
                 <vs-icon icon="shopping_cart" color="primary"></vs-icon>
             </button>
@@ -25,20 +26,28 @@
 </template>
 
 <script>
+    import { mapGetters, mapActions } from 'vuex'
+
     export default {
         name: "ProductCardComponent",
         props: ["product"],
+        components: {
+            CartComponent: () => import('./CartComponent.vue')
+        },
         data: () => ({
             product_desc: 'Бумажка от конфеты уп. 10 шт. Можно взять много',
-        })
+        }),
+        methods: mapActions('cart', [
+            'addProductToCart'
+        ]),
     }
 
 </script>
 <style scoped>
     .product_image_catalog_link {
-        display: block;
+        /*display: block;*/
         /*background-color: lightgray;*/
-        height: 100px;
+        height: 100%;
     }
     .product_image_catalog {
         width: 100%;
