@@ -8,6 +8,7 @@ import CartComponent from '@/components/CartComponent'
 Vue.use(Router)
 
 export default new Router({
+    mode: 'history',
     routes: [
         {
             path: '/',

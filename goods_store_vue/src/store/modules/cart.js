@@ -1,9 +1,8 @@
 // initial state
 // shape: [{ product, quantity }]
 const state = {
-    items: [],
+    items: []
 };
-
 // getters
 const getters = {
     cartTotalPrice: (state) => {

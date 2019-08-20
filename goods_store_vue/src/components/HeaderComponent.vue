@@ -73,11 +73,11 @@
                         <vs-icon icon="search" color="primary"></vs-icon>
                     </button>
                     <div class="d-flex align-items-center p-0 pl-3 cart_ico">
-                        <button class="d-flex align-items-stretch justify-content-end cart_ico">
+                        <a href="/cart" class="d-flex align-items-stretch justify-content-end cart_ico">
                             <vs-icon icon="shopping_cart" color="primary"></vs-icon>
                             <span class="cart_counter danger">{{total_count}}</span>
                             <span class="d-none d-sm-block primary pl-2">{{total_price}}p</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
